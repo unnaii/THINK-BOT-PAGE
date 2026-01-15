@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkBot - Robotika Irekia Hezkuntzarako</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ThinkBot Logo">
+                    <span class="logo-text">THINKBOT</span>
+                </a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="laster.html">Laster</a></li>
+                    <li><a href="denda.html">Denda</a></li>
+                    <li><a href="hello_blocks.html">Hello Blocks</a></li>
+                </ul>
+                <div class="auth-buttons" id="auth-buttons">
+                    <a href="#" class="btn-signin" onclick="openModal()">Sign In</a>
+                    <a href="#" class="btn-login" onclick="openModal()">Log In</a>
+                </div>
+                <div class="user-display" id="user-display" style="display: none;">
+                    <span class="username" id="username-display">User</span>
+                    <button class="btn-logout" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container" style="display: flex; align-items: center;">
+            <div class="hero-content">
+                <h1>Robotika irekia etorkizuneko hezkuntzarako</h1>
+                <p>Ikasi, eraiki eta programatu zure robotak modu dibertigarrian. ThinkBot open source da.</p>
+                <a href="denda.html" class="btn-cta">Erois Orain</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/producto.png" alt="ThinkBot Robot">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Guri Buruz</h2>
+            <p class="about-text">ThinkBot hezkuntzara bideratutako robotika irekiko (open source) proiektu bat da. Gure
+                helburua teknologia guztion eskura egotea da.</p>
+
+            <!-- Feature blocks removed as per user request -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 ThinkBot. Open Source Robotics.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <form class="auth-form" onsubmit="handleLogin(event)">
+                <h2>Ongi etorri</h2>
+                <div class="form-group">
+                    <label>Erabiltzailea</label>
+                    <input type="text" id="username-input" required placeholder="Sartu zure izena">
+                </div>
+                <div class="form-group">
+                    <label>Pasahitza</label>
+                    <input type="password" required placeholder="******">
+                </div>
+                <button type="submit" class="btn-submit">Sartu</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

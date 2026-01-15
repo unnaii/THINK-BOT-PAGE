@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Blocks - ThinkBot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ThinkBot Logo">
+                    <span class="logo-text">THINKBOT</span>
+                </a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="laster.html">Laster</a></li>
+                    <li><a href="denda.html">Denda</a></li>
+                    <li><a href="hello_blocks.html" class="active">Hello Blocks</a></li>
+                </ul>
+                <div class="auth-buttons" id="auth-buttons">
+                    <a href="#" class="btn-signin" onclick="openModal()">Sign In</a>
+                    <a href="#" class="btn-login" onclick="openModal()">Log In</a>
+                </div>
+                <div class="user-display" id="user-display" style="display: none;">
+                    <span class="username" id="username-display">User</span>
+                    <button class="btn-logout" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="hello-blocks-content">
+                <h1>Programatu Erraz Hello Blocks-ekin</h1>
+                <p style="margin-bottom: 2rem; font-size: 1.2rem; color: #666;">
+                    Hello Blocks programazio bisualeko tresna indartsua da, zure ThinkBot robotari bizia emateko
+                    diseinatua.
+                    Ez duzu kodea idazten jakin behar; arrastatu blokeak eta ikusi zure robota nola mugitzen den!
+                </p>
+
+                <a href="https://www.hello-blocks.com/editor/" target="_blank" class="btn-cta"
+                    style="font-size: 1.2rem; padding: 1rem 2.5rem;">
+                    JOAN HELLO BLOCKS-ERA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 ThinkBot. Open Source Robotics.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <form class="auth-form" onsubmit="handleLogin(event)">
+                <h2>Ongi etorri</h2>
+                <div class="form-group">
+                    <label>Erabiltzailea</label>
+                    <input type="text" id="username-input" required placeholder="Sartu zure izena">
+                </div>
+                <div class="form-group">
+                    <label>Pasahitza</label>
+                    <input type="password" required placeholder="******">
+                </div>
+                <button type="submit" class="btn-submit">Sartu</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
