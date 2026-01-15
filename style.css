@@ -515,7 +515,7 @@ footer {
 }
 
 /* --- Responsive --- */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -590,4 +590,5 @@ footer {
     .product-display {
         flex-direction: column;
     }
+
 }
